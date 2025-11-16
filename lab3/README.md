@@ -54,7 +54,7 @@ class Program
 
 **==================================================================================**
 ![код программы](https://github.com/Corleone-Inc/ZIVPO_labs/blob/main/lab3/images/Снимок%20экрана%202025-11-16%20204532.jpg)
-<img src="https://github.com/Corleone-Inc/ZIVPO_labs/blob/main/lab3/images/Снимок%20экрана%202025-11-16%20204532.jpg" width="800" height="600">
+<img src="https://github.com/Corleone-Inc/ZIVPO_labs/blob/main/lab3/images/Снимок%20экрана%202025-11-16%20204532.jpg" width="100" height="100">
 
 ## Описание работы программы
 Программа запускает консольное окно и выводит информацию о лабораторной работе и фамилии выполнивших ее студентов. Затем программа выполняет системный вызов Windows API - создает временный файл test.txt в папке Documents текущего пользователя с помощью функции CreateFile из kernel32.dll. После этого программа получает путь к папке Documents, считывает все подкаталоги и файлы в этой папке и выводит их список в консоль. В конце программа ожидает нажатия любой клавиши пользователем, чтобы консольное окно не закрывалось сразу после выполнения всех операций.
@@ -64,7 +64,18 @@ class Program
 **Шаг 1**
 Для начала превратили проект в exe-файл. И дизассемблировали его через IDA
 Видим, что все функции и программы легко прочитать и понять
-!
+**Дизассемблированный код до обсфукации**
+<img src="https://github.com/Corleone-Inc/ZIVPO_labs/blob/main/lab3/images/photo_5246957968828337649_y.jpg" width="800" height="600">
+<img src="https://github.com/Corleone-Inc/ZIVPO_labs/blob/main/lab3/images/photo_5246957968828337650_y.jpg" width="800" height="600">
+
 **Шаг 2**
+Затем загрузили файл в обсфукатор. Программа была написана на языке C#, поэтому был выбран обсфукатор ___yetAnotherObfuscator___
+https://github.com/0xb11a1/yetAnotherObfuscator
+
+<img src="https://github.com/Corleone-Inc/ZIVPO_labs/blob/main/lab3/images/photo_5246957968828337625_y.jpg" width="800" height="600">
+
 **Шаг 3**
-**Шаг 4**
+
+Обсфуцированный файл дизассемблировали в IDA. Получили вот такой результат:
+<img src="https://github.com/Corleone-Inc/ZIVPO_labs/blob/main/lab3/images/photo_5246957968828337645_y.jpg" width="800" height="600">
+<img src="https://github.com/Corleone-Inc/ZIVPO_labs/blob/main/lab3/images/photo_5246957968828337646_y.jpg" width="800" height="600">
